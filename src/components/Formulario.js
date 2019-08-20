@@ -26,7 +26,7 @@ class Formulario extends Component {
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault();
-                                value.obtenerDatosEvento(this.state);
+                                value.obtenerEventos(this.state);
                             }}
                         >
                             <fieldset className="uk-fieldset uk-margin">
@@ -49,10 +49,10 @@ class Formulario extends Component {
                                 <div className="uk-margin" uk-margin="true">
                                     <select
                                         className="uk-select"
-                                        name="categoría"
+                                        name="categoria"
                                         onChange={this.obtenerDatosEvento}
                                     >
-                                        <option value="">Seleccione Categoría</option>
+                                        <option value="">Selecciona Categoría</option>
                                         <CategoriasConsumer>
                                             {(value) => {
                                                 return (

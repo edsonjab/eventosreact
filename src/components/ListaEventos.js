@@ -4,11 +4,14 @@ import { EventosConsumer } from '../context/EventosContext';
 
 const ListaEventos = () => {
     return (
-        <div className="uk-child-widht-1-3@m" uk-grid="true">
+        <div className="uk-child-width-1-3@m" uk-grid="true">
             <EventosConsumer>
                 {(value) => {
                     return value.eventos.map(evento => (
-                        <Evento />
+                        <Evento 
+                            key={evento.id}
+                            evento={evento}
+                        />
                     ))
                 }}
             </EventosConsumer>
